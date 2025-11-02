@@ -11,8 +11,7 @@ const Blog = () => {
           Powerfull AI Tools
         </h2>
         <p className="text-gray-500 max-w-lg mx-auto">
-          Everything you need to create, enhance and optimize you content with
-          cutting-edge AI technology.
+          Jobfit-AI helps you prepare smarter with AI interview practice, ATS resume analysis, and personalized career roadmap generation — all in one platform.
         </p>
       </div>
 

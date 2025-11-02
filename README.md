@@ -1,24 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# JobFit AI - Resume ATS Reviewer
+
+An AI-powered resume analysis tool that provides comprehensive feedback on ATS (Applicant Tracking System) compatibility and professional presentation.
+
+## Features
+
+- **AI-Powered Analysis**: Uses advanced AI to analyze resume content and structure
+- **ATS Compatibility Check**: Evaluates how well your resume will pass through ATS systems
+- **Comprehensive Feedback**: Provides detailed scores, strengths, weaknesses, and suggestions
+- **Modern UI**: Beautiful, responsive interface with drag-and-drop file upload
+- **PDF Support**: Analyzes PDF resumes with text extraction
+- **No Database Required**: Simple, stateless application
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18+ 
+- OpenRouter API key (for AI analysis)
+
+### Installation
+
+1. Clone the repository
+2. Install dependencies:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Create a `.env.local` file in the root directory:
+```bash
+OPENROUTER_API_KEY=your_openrouter_api_key_here
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+4. Run the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+5. Open [http://localhost:3000/ats-analyser](http://localhost:3000/ats-analyser) to access the resume reviewer
+
+### Getting an OpenRouter API Key
+
+1. Visit [OpenRouter.ai](https://openrouter.ai/)
+2. Sign up for an account
+3. Generate an API key
+4. Add it to your `.env.local` file
+
+## How to Use
+
+1. Navigate to the ATS Analyser page
+2. Upload a PDF resume (max 5MB)
+3. Click "Analyze Resume" 
+4. Get instant feedback on:
+   - Overall score (0-100)
+   - ATS compatibility rating
+   - Strengths and areas for improvement
+   - Specific recommendations
+   - Key terms found
+   - Detailed analysis
+
+## Tech Stack
+
+- **Frontend**: Next.js 16, React 19, Tailwind CSS
+- **Backend**: Next.js API Routes
+- **AI**: OpenRouter API with DeepSeek model
+- **PDF Processing**: pdf-parse
+- **Icons**: Lucide React
 
 ## Learn More
 
